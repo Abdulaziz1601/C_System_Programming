@@ -30,26 +30,42 @@ int fact = 1;
         printf("Factorial of %d = %llu\n", n, fact);
   }
 }
+int fibonacci(int n) {
+if (n <= 2 )
+{
+	return 1;
+}
+
+return fibonacci(n-1) + fibonacci(n-2);
+}
 int main() {
-int number1, number2,num;
+int number1, number2,num, fib = 0;
 printf("\nSimple C programm\n\n");
 printf("Enter any numbers to add/substract/multiply/divide\n");
 scanf("%d", &number1);
 scanf("%d", &number2);
 
 add(number1,number2);
-
 substract(number1,number2);
 
 multiply(number1,number2);
 
 divide(number1,number2);
 
-printf("Enter number to find Its factorial\n");
+/*printf("Enter number to find Its factorial\n");*/
 
-scanf("%d", &num);
+/*scanf("%d", &num);*/
 
-factorial(num);
+/*factorial(num);*/
+
+
+printf("Enter which fibonacci number to find\n");
+
+scanf("%d", &fib);
+
+printf("Fibonacci of %d is %d", fib, fibonacci(fib));
+
+
 
 return 0;
 
